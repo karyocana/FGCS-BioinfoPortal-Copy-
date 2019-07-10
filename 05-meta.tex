@@ -1,0 +1,36 @@
+\section{Conclusions and Future Work}\label{sec:conclusions}
+
+
+Although Apache Spark is a widely adopted DISC system for big data analytics and in-memory processing, it still lacks support for provenance management. 
+This manuscript introduced \system, a solution that aims at fulfilling that gap and provide the support for running scientific workflows with provenance.
+\system was carefully designed to handle prospective, retrospective, and domain data at runtime without jeopardizing Apache Spark overall performance.
+Accordingly, we discussed and implemented an in-memory file system, called \texttt{SAMbA-FS}, which not only optimizes the execution of workflows with black-box applications as activities but also enables Apache Spark to become aware of contents produced by those external programs.
+Experts can seamless instantiate \texttt{RDD Schemas} for the extraction of data elements produced by transformations that are further stored according to a \texttt{PROV-Df}-compliant model.
+Persisted provenance data are retrieved at runtime by \textit{web} reports and can be queried by high-level SQL statements after the end of the experiments.
+We evaluated \system on three real-world scientific workflows (\word, \montage, and \sci) and results indicated: 
+\textit{(i)}~\system did not jeopardize standard Apache Spark performance, and 
+\system{(ii)}~\system efficiently provided runtime and \textit{post-mortem} data analytics.
+%Accordingly, we believe \system can turn Apache Spark into an even more attractive alternative for the running of scientific workflows. 
+Future work includes adapting the \system design to collect provenance from Data Frames as many applications are moving towards to them.
+
+
+% Apache Spark is a widely adopted DISC system for big data analytics and its in-memory processing, large installation base, and support has attracted IO intensive scientific workflows to benefit from data parallelism, scheduling strategies and fault tolerance mechanisms.
+% However, Apache Spark is still limited in supporting data provenance and analysis. \system contributes to current approaches in providing provenance to Spark by capturing prospective, retrospective, and domain data provenance during the workflow execution.
+% In addition, SAMBA also extracts raw data selected from files by an efficient file system named \texttt{SAMbA-FS}.
+
+% We modeled the gathered provenance data by using the \texttt{PROV-Df} model.
+% Moreover, \system supports provenance management by properly handling both the structure and content of Spark RDDs.
+% Experts can instantiate \texttt{RDD Schemas} for the extraction of data elements produced by black-boxes transformations.
+% \system uses an in-memory file system that improves I/O operations demanded by black-box programs of scientific workflows and efficiently provides users with runtime querying and \textit{post-mortem} data analytics.
+% %\system relies on an in-memory file system that improves I/O operations demanded by black-box programs of scientific workflows so that our approach efficiently provides runtime querying and \textit{post-mortem} data analytics.
+
+% We evaluate \system in a practical scientific workflow on bioinformatics domain called \texttt{SciPhy} and results indicated: (i) \system did not jeopardize standard Apache Spark performance, and (ii) \system efficiently provided runtime and \textit{post-mortem} data analytics.
+
+% We believe that \system can make the use of Apache Spark even more attractive for the classes of IO-intensive scientific workflows. 
+% Future work includes the evaluation of \system with different scientific workflows, such as Montage~\cite{montage}. We also plan to investigate how to collect provenance from Data Frames as many applications are moving toward to them.
+
+% \section*{Acknowledgments}
+
+
+
+

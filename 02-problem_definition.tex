@@ -1,0 +1,79 @@
+\section{Related Work}\label{sec:background}
+
+%This section provides the background and formal definitions of CSGrid Spark and related work.
+
+\subsection{Notation}
+
+xxx
+
+
+\subsection{Current provenance issues on Apache Spark}
+
+xxx
+
+\subsection{Provenance and domain data}\label{sec:provenance}
+
+xxx
+
+\subsection{Related Work -- Science Gateways and CSGrid}\label{sec:related}
+
+Rodrigo \textit{et al.}
+\cite{RODRIGO2018206} present a methodology to characterise workloads and assess their heterogeneity, at particular time period and evolution over time. They apply this methodology to the workloads systems at the National Energy Research Scientific Computing Center (NERSC) in order to understand main features belonging to the HPC workloads and to enable the efficient scheduling in HPC systems. The present work explore the behaviour of the performance and scalability features of the bioinformatics HPC software RAxML in the supercomputer Santos Dumont. Machine learning analyses are utilised for building the predictive models in order to reach an efficient job allocation for \system Science Gateway. Features as the type of clusters, quantity of cores, input data size, and RAxML performance results were used as input data information in the machine learning analyses.
+
+Pfeiffer and  Stamatakis \cite{5470900} present a performance analysis of the parallel versions implemented in RAxML, supporting the Hybrid version as the most efficient. Zhou \textit{et al.} \cite{zhou2017phylo} present a comparative analysis between the PhyML, IQ-TREE and RAxML/ExaML programs, concluding that RAxML, in addition to being more scalable, generates better-quality tree topologies. This paper explores the performance of RAxML in the Santos Dumont supercomputer, exploring environment configurations and RAxML settings (as bootstrap values and data size features, and the the evolutionary models) that influence executions. They are complementary work since exploring HPC software as RAxML presents several challenges as coupling to HPC infrastructures to demonstrate performance behaviour and scalability for processing parallel and distributed executions
+
+\begin{table}[t]
+\centering{
+\caption{Components and functionalities of SINAPAD for execution support in \system.}
+\label{tab:sinapad}
+\begin{tabular}{|p{3.8cm}|p{10cm}|}
+
+\hline
+          \textbf{Components} & \textbf{Functionalities}\\
+\hline
+                      
+\textbf{HPC/HTC}    & 
+\hangindent=3.5mm\hangafter=1$-$\hspace{1mm}Scalability, performance analyses, optimization, resource distribution
+    \\ \hline
+\textbf{Shared architecture}      & 
+\hangindent=3.5mm\hangafter=1$-$\hspace{1mm}Shared memory
+
+\hangindent=3.5mm\hangafter=1$-$\hspace{1mm}Types: SMP, UMA, NUMA, GPU, etc.
+
+\hangindent=3.5mm\hangafter=1$-$\hspace{1mm}Parallelization: OpenMP6, Threads, PThreads, CUDA
+    \\ \hline
+\textbf{Distributed architecture}      & 
+\hangindent=3.5mm\hangafter=1$-$\hspace{1mm}Distributed memory, Distributed Resource Management Application API (DRMAA), storages, parallelization (MPI)
+
+\hangindent=3.5mm\hangafter=1$-$\hspace{1mm}Heterogeneous resources - clusters: OGE, SGE-Oracle, Sun Grid Engine, PBS, PBS Pro, TorquePBS, SLURM, LSF, LoadLeveler
+
+\hangindent=3.5mm\hangafter=1$-$\hspace{1mm}Computers interconnected via HPC net (infiniband, fibrechannel)
+
+\hangindent=3.5mm\hangafter=1$-$\hspace{1mm}Distributed file system: Lustre, NFS, pNFS, etc.
+    \\ \hline
+\textbf{Hybrid architecture}       & 	
+\hangindent=3.5mm\hangafter=1$-$\hspace{1mm}Shared + distributed memory         
+    \\ \hline
+\textbf{Cloud computing}     & 	
+\hangindent=3.5mm\hangafter=1$-$\hspace{1mm}Virtualization
+
+\hangindent=3.5mm\hangafter=1$-$\hspace{1mm}Pay-per-use resources
+
+\hangindent=3.5mm\hangafter=1$-$\hspace{1mm}Low scale Brazilian academic resources
+
+\hangindent=3.5mm\hangafter=1$-$\hspace{1mm}Data providers
+     \\ \hline
+\textbf{Grid environment}     & 	
+\hangindent=3.5mm\hangafter=1$-$\hspace{1mm}Types: HPC/HTC and opportunistic (volunteers)
+
+\hangindent=3.5mm\hangafter=1$-$\hspace{1mm}Usual Grid tools: Globus, Maui-Moab, Condor, CSGrid
+
+
+\hangindent=3.5mm\hangafter=1$-$\hspace{1mm}Data provider
+
+\hangindent=3.5mm\hangafter=1$-$\hspace{1mm}Typically heterogeneous resources
+     \\ \hline
+\end{tabular}}
+\end{table}
+
+
